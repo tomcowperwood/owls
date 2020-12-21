@@ -1,0 +1,62 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.search_form{
+	display: none;
+}
+.search_form2{
+	display: block;
+}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px) {
+}
+
+@media only screen and (max-width : 525px) {
+	.search{		
+		width: 275px;
+	}
+	
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 300px) {
+	.search{		
+		width: 175px;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 640px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
