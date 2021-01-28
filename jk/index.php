@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/media.css">
 
     <title>Мебель под ключ</title>
 </head>
 <body>
+
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -26,15 +29,22 @@
             </nav>
         </div>
     </header>
+
     <div class="search2">
         <form action="obr.php" method="get" class="search_form2">
             <input type="text" name="search" class="search" placeholder="Поиск">
         </form>
     </div>
-    <section class="products">
-    <div class="prod">
+
+    <h2 class="bg">Список товаров</h2>
+    <section class="products">    
+        <div class="prod">
             <div class="prod_head">
                 <a href="#" class="prod_name">Название</a>
+                <form action="red.php" method="post" class="prod_name prod_name_f">
+                    <input type="hidden" name="red" value="id">
+                    <input type="submit" value=" . . . " class="red">
+                </form>
             </div>
             <div class="prod_img">
                 <img src="../img/1.jpg" alt="" sizes="" srcset="">
@@ -53,6 +63,10 @@
         <div class="prod">
             <div class="prod_head">
                 <a href="#" class="prod_name">Название</a>
+                <form action="red.php" method="post" class="prod_name prod_name_f">
+                    <input type="hidden" name="red" value="id">
+                    <input type="submit" value=" . . . " class="red">
+                </form>
             </div>
             <div class="prod_img">
                 <img src="../img/1.jpg" alt="" sizes="" srcset="">
@@ -71,6 +85,10 @@
         <div class="prod">
             <div class="prod_head">
                 <a href="#" class="prod_name">Название</a>
+                <form action="red.php" method="post" class="prod_name prod_name_f">
+                    <input type="hidden" name="red" value="id">
+                    <input type="submit" value=" . . . " class="red">
+                </form>
             </div>
             <div class="prod_img">
                 <img src="../img/1.jpg" alt="" sizes="" srcset="">
@@ -89,6 +107,10 @@
         <div class="prod">
             <div class="prod_head">
                 <a href="#" class="prod_name">Название</a>
+                <form action="red.php" method="post" class="prod_name prod_name_f">
+                    <input type="hidden" name="red" value="id">
+                    <input type="submit" value=" . . . " class="red">
+                </form>
             </div>
             <div class="prod_img">
                 <img src="../img/1.jpg" alt="" sizes="" srcset="">
@@ -107,10 +129,18 @@
     </section>
 
     <!-- Страничка товара -->
+    <h2 class="bg">Страничка товара</h2>
     <section class="prod_one">
         <div class="prod2">
             <div class="prod_head">
-                <a href="#" class="prod_name"></a>
+                <a href="#" class="prod_name">Название товара #1</a>
+                <!-- <a href="#" class="prod_name"> . . . </a> -->
+
+                <form action="red.php" method="post" class="prod_name prod_name_f">
+                    <input type="hidden" name="red" value="id">
+                    <input type="submit" value=" . . . " class="red">
+                </form>
+
             </div>
             <div class="prod_img">
 
@@ -144,8 +174,8 @@
                 
             </div>
             <div class="prod_body">
-                <div class="prod_cat">Категория</div>
-                <div class="prod_price">Цена</div>
+                <div class="prod_cat">Категория: abcdefg</div>
+                <div class="prod_price">Цена: 300$</div>
             </div>
             <div class="prod_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate beatae, tempora nesciunt laborum nostrum ipsam deserunt, omnis odit sequi doloribus cumque ea libero? Dolorum laborum, praesentium temporibus optio est debitis.</div>
             <div class="prod_act">
@@ -155,13 +185,60 @@
         </div>
 
         <div class="prod_cont">
-            <div class="">...</div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore suscipit facilis commodi sapiente placeat accusamus minima? Cupiditate illo ab non sint, cumque sunt architecto sapiente nam suscipit, nihil, in natus.</p>
+            
         </div>
     </section>
+    
+    <!-- Редактирование -->
+    <h2 class="bg">Редактирование</h2>
+    <section class="redact bg">
+        <form action="red.php" method="post" class="red_f">
+            <div class="">Название товара:</div>
+            <table>
+                <tr>    <td><span>Было:</span></td> <td><span>abc</span></td>         </tr>
+                <tr>    <td>Изменить на:</td>       <td><input type="text" name="prod_name" id=""></td></tr>
+            </table>
+                                            
+            <div class="">Категория:</div>
+            <table>
+                <tr>    <td><span>Было:</span></td> <td><span>abc</span></td>         </tr>
+                <tr>    <td>Изменить на:</td>       <td><input type="text" name="prod_name" id=""></td></tr>
+            </table>
+                    
+            <div class="">Цена:</div>
+            <table>
+                <tr>    <td><span>Было:</span></td> <td><span>abc</span></td>         </tr>
+                <tr>    <td>Изменить на:</td>       <td><input type="text" name="prod_name" id=""></td></tr>
+            </table>
+
+            <div class="">Описание:</div>
+            <table>
+                <tr>    <td><span>Было:</span></td> <td><span>abc</span></td>         </tr>
+                <tr>    <td>Изменить на:</td>       <td><input type="text" name="prod_name" id=""></td></tr>
+            </table>
+
+            <div class="">Контент:</div>
+            <table>
+                <tr>    <td><span>Было:</span></td> <td><span>abc</span></td>         </tr>
+                <tr>    <td>Изменить на:</td>       <td><input type="text" name="prod_name" id=""></td></tr>
+            </table>
+            
+        </form>
+
+    
+    </section>
+    
+    
+
+    
     
     
     
     <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+              <script src="js/popper.min.js"></script>
+              <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
 </body>
 </html>

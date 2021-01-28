@@ -18,6 +18,17 @@
 .search_form2{
 	display: block;
 }
+.prod_cont{
+    width: 100%;
+}
+.prod2{
+    width: 100%;
+    padding: 10px;
+}
+.redac img{
+	width: 400px !important;
+}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -37,6 +48,15 @@
 		width: 175px;
 	}
 }
+@media only screen and (max-width : 370px) {
+.prod_img img{
+    width: 300px;
+}
+.prod{
+    width: 300px;
+    margin: 10px;
+}
+}
 
 
 /*==========  Mobile First Method  ==========*/
@@ -51,6 +71,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.redac img{
+		width: 500px !important;
+	}
 }
 
 /* Medium Devices, Desktops */
